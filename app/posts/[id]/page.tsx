@@ -3,6 +3,11 @@ async function getPost(postId: string) {
     `http://127.0.0.1:8090/api/collections/posts/records/${postId}`,
     { next: { revalidate: 10 } }
   );
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+    // 가장 가까이에 있는 error.js file activated
+  }
+
   const data = res.json();
   return data;
 }
