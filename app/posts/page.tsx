@@ -7,13 +7,12 @@ async function getPost() {
     { cache: "no-store" }
   );
   const data = await res.json();
-  // console.log(data); 안찍히는 이유?
+  // console.log(data);
   return data?.items as any[];
 }
 
 async function PostsPage() {
   const posts = await getPost();
-
   return (
     <div>
       <h1>Posts</h1>

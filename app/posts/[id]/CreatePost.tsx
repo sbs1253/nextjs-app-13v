@@ -15,6 +15,7 @@ const CreatePost = () => {
     });
     setTitle("");
     router.refresh();
+    console.log(title);
   };
   return (
     <form onSubmit={handleSubmit}>

@@ -14,6 +14,7 @@ async function getPost(postId: string) {
 
 async function PostDetailPage({ params }: any) {
   const post = await getPost(params.id);
+  console.log(params);
   return (
     <div>
       <h1>Posts/{post.id}</h1>
