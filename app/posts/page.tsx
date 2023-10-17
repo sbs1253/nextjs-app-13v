@@ -7,7 +7,7 @@ async function getPost() {
     { cache: "no-store" }
   );
   const data = await res.json();
-  // console.log(data);
+  // console.log(data?.items as any[]);
   return data?.items as any[];
 }
 
