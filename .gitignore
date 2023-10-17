@@ -35,6 +35,7 @@ yarn-error.log*
 next-env.d.ts
 
 # database
-pocketbase 
-pb-data/
-pb-migrations/
+pocketbase
+pocketbase.exe
+/pb-data
+/pb-migrations
