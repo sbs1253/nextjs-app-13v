@@ -7,14 +7,14 @@ async function getPost(postId: string) {
     throw new Error("Failed to fetch data");
     // 가장 가까이에 있는 error.js file activated
   }
-
+  console.log("Fetching data");
   const data = res.json();
   return data;
 }
 
 async function PostDetailPage({ params }: any) {
-  const post = await getPost(params.id);
   console.log(params);
+  const post = await getPost(params.id);
   return (
     <div>
       <h1>Posts/{post.id}</h1>

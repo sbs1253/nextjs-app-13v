@@ -11,7 +11,8 @@ async function getPost() {
   return data?.items as any[];
 }
 
-async function PostsPage() {
+async function PostsPage(params: any) {
+  console.log(params, "params");
   const posts = await getPost();
   return (
     <div>
